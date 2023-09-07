@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,11 +33,12 @@ export default function RootLayout({
 
 				{/* <!-- MAIN CSS --> */}
 				<link rel="stylesheet" href="/css/tooplate-gymso-style.css" />
-				<script src="/js/jquery.min.js"></script>
-				<script src="/js/bootstrap.min.js"></script>
-				<script src="/js/aos.js"></script>
-				<script src="/js/smoothscroll.js"></script>
-				<script src="/js/custom.js"></script>
+				<Script src="/js/jquery.min.js"></Script>
+				<Script src="/js/bootstrap.min.js"></Script>
+				<Script src="/js/aos.js"></Script>
+				<Script src="/js/smoothscroll.js"></Script>
+				<Script src="/js/custom.js"></Script>
+
 			</head>
 			<body className={inter.className}>{children}</body>
 		</html>
