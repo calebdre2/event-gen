@@ -1,9 +1,11 @@
 type EventInfo = {
 	name: string
+	host: string
+	about: About
 	date: Date
 	startTime: string
+	endTime: string
 	location: string
-	description: string
 	routeInfo: RouteInfo
 	foodServed: string[]
 	packetPickupInfo: PacketPickupInfo
@@ -16,6 +18,10 @@ type EventInfo = {
 	organizationInfo: string
 }
 
+type About = {
+	title: string
+	description: string
+}
 type PacketPickupInfo = {
 	startdate: Date
 	endDate: Date
@@ -23,7 +29,6 @@ type PacketPickupInfo = {
 	timeEnd: string
 	location: string
 }
-
 type BibPickupInfo = {
 	videoUrl?: string
 	description: string
@@ -41,15 +46,16 @@ type RouteInfo = {
 }
 
 type RegistrationProduct = {
-	category: string
-	costs: Cost[]
-	registerSameDay: boolean
-}
-
-type Cost = {
-	amount: number
-	participantType: ParticipantType
-	validUntil: Date
+	name: string
+	registerSameDayCost?: number
+	image: string
+	tiers: {
+		name: string
+		price: number
+		participantType: ParticipantType
+		validUntil: Date
+		gifts: string[]
+	}[]
 }
 
 type PaymentMethod = {
@@ -59,15 +65,10 @@ type PaymentMethod = {
 
 type ParticipantType = 'Adult' | 'Youth'
 
-type RegistrationGift = {
-	name: string
-	paticipantType: ParticipantType
-}
 
 type RegistrationInfo = {
-	costs: RegistrationProduct[]
+	products: RegistrationProduct[]
 	disclaimer: string
-	gifts: RegistrationGift[]
 }
 
 type ContactInfo = {
@@ -84,22 +85,27 @@ type Sponsor = {
 
 export let eventInfo: EventInfo = {
 	name: 'Masquerade 5K',
+	host: 'STRIDE592',
 	date: new Date('2023-12-03'),
 	startTime: '6:30 AM',
+	endTime: '11 AM',
 	location: 'Seawall Band Stand',
-	description: `STRIDE592 holiday Masquerade 5K walk/run will take place on Sunday, December 3, 2023 at 6:30 AM. Kick off the holiday in a fun way, get decked out and festive for this 5K. Proceeds from this race will be donated to bring holiday joy and cheer to the children at XXXXX. 
-
-    The 3.1 mile course takes you from the Seawall Band Stand down High Street and along the holiday festive Main Street.  Culminating at the Christmas Village’s displays with traditional Christmas lighted figures, Santa, angels, and many local favorites before heading back up the avenue for an exciting finish on the Seawall. 
-    
-    The Masquerade 5K will serve up pepperpot, homemade style bread, ginger beer and other holiday refreshments and will feature photos with Bam Bam Sally, a holiday costume contest, and much more!
-    
-     The Masquerade 5K will be especially popular among families and groups of friends.
-    Go for your best time or enjoy a leisurely walk through the route with friends and family.`,
+	about: {
+		title: "HIP HIP HOORAY FOR THE HOLIDAYS!",
+		description: `STRIDE592 holiday Masquerade 5K walk/run will take place on Sunday, December 3, 2023 at 6:30 AM. Kick off the holiday in a fun way, get decked out and festive for this 5K. Proceeds from this race will be donated to bring holiday joy and cheer to the children at XXXXX. 
+	
+		The 3.1 mile course takes you from the Seawall Band Stand down High Street and along the holiday festive Main Street.  Culminating at the Christmas Village’s displays with traditional Christmas lighted figures, Santa, angels, and many local favorites before heading back up the avenue for an exciting finish on the Seawall. 
+		
+		The Masquerade 5K will serve up pepperpot, homemade style bread, ginger beer and other holiday refreshments and will feature photos with Bam Bam Sally, a holiday costume contest, and much more!
+		
+		 The Masquerade 5K will be especially popular among families and groups of friends.
+		Go for your best time or enjoy a leisurely walk through the route with friends and family.`,
+	},
 	foodServed: ['Pepperpot', 'Homemade Bread', 'Ginger Beer'],
 	routeInfo: {
 		description: `Starting at the Seawall Bandstand, exit south on to High street, moving along for ½ mile down to Main St the Bank of Guyana and lopping back up main street. Right onto Young St, left onto Camp Street for an exciting finish at the Seawall.`,
 		location: 'Seawall Bandstand- Seawall Rd',
-		mapImage: 'Masquerade5KRoute.png'
+		mapImage: 'images/class/map.png',
 	},
 
 	packetPickupInfo: {
@@ -130,95 +136,101 @@ export let eventInfo: EventInfo = {
 Strollers are welcome with the understanding they will start behind all other runners and push in a safe and prudent manner.`
 	},
 	registrationInfo: {
-		gifts: [
+		products: [
 			{
-				name: '5k T-Shirt',
-				paticipantType: 'Adult'
+				name: '5K Timed',
+				image: 'images/class/class1.jpg',
+				tiers: [
+					{
+						name: 'Early Bird',
+						price: 25,
+						participantType: 'Adult',
+						validUntil: new Date('2023-10-31'),
+						gifts: [
+							'5k T-Shirt',
+							'Commemorative Bib',
+							'Finish Line Photo',
+							"Finisher's Medal",
+							'Free Refreshments'
+						]
+					},
+					{
+						name: 'Regular',
+						price: 30,
+						participantType: 'Adult',
+						validUntil: new Date('2023-11-25'),
+						gifts: [
+							'5k T-Shirt',
+							'Commemorative Bib',
+							'Finish Line Photo',
+							"Finisher's Medal",
+							'Free Refreshments'
+						]
+					},
+					{
+						name: 'Late',
+						price: 45,
+						participantType: 'Adult',
+						validUntil: new Date('2023-11-30'),
+						gifts: [
+							'5k T-Shirt',
+							'Commemorative Bib',
+							'Finish Line Photo',
+							"Finisher's Medal",
+							'Free Refreshments'
+						]
+					}
+				]
 			},
 			{
-				name: 'Commemorative Bib',
-				paticipantType: 'Adult'
-			},
-			{
-				name: 'Finish Line Photo',
-				paticipantType: 'Adult'
-			},
-			{
-				name: "Finisher's Medal",
-				paticipantType: 'Adult'
-			},
-			{
-				name: 'Free Refreshments',
-				paticipantType: 'Adult'
-			},
-			{
-				name: 'Jingle bells for sneakers',
-				paticipantType: 'Youth'
-			},
-			{
-				name: 'Commemorative Bib',
-				paticipantType: 'Youth'
-			},
-			{
-				name: 'Finish Line Photo',
-				paticipantType: 'Youth'
-			},
-			{
-				name: "Finisher's Medal",
-				paticipantType: 'Youth'
-			},
-			{
-				name: 'Free Refreshments',
-				paticipantType: 'Youth'
+				name: '5K Untimed',
+				image: 'images/class/class2.jpg',
+				registerSameDayCost: 35,
+				tiers: [
+					{
+						name: 'Early Bird',
+						price: 20,
+						participantType: 'Adult',
+						validUntil: new Date('2023-10-31'),
+						gifts: [
+							'5k T-Shirt',
+							'Commemorative Bib',
+							'Finish Line Photo',
+							"Finisher's Medal",
+							'Free Refreshments'
+						]
+					},
+					{
+						name: 'Regular',
+						price: 25,
+						participantType: 'Adult',
+						validUntil: new Date('2023-11-25'),
+						gifts: [
+							'5k T-Shirt',
+							'Commemorative Bib',
+							'Finish Line Photo',
+							"Finisher's Medal",
+							'Free Refreshments'
+						]
+					},
+					{
+						name: 'Late',
+						price: 30,
+						participantType: 'Adult',
+						validUntil: new Date('2023-11-30'),
+						gifts: [
+							'5k T-Shirt',
+							'Commemorative Bib',
+							'Finish Line Photo',
+							"Finisher's Medal",
+							'Free Refreshments'
+						]
+					}
+				]
 			}
 		],
 		disclaimer:
 			'Registration fees and donations cannot be refunded. Your event dollars are put to work immediately and enable STRIDE592 to continue to support critical NGO’s in our community.',
-
-		costs: [
-			{
-				category: '5K Timed',
-				registerSameDay: false,
-				costs: [
-					{
-						participantType: 'Adult',
-						amount: 25,
-						validUntil: new Date('2023-10-31')
-					},
-					{
-						participantType: 'Adult',
-						amount: 30,
-						validUntil: new Date('2023-11-25')
-					},
-					{
-						participantType: 'Adult',
-						amount: 45,
-						validUntil: new Date('2023-11-30')
-					}
-				]
-			},
-			{
-				category: '5K Untimed',
-				registerSameDay: true,
-				costs: [
-					{
-						participantType: 'Adult',
-						amount: 20,
-						validUntil: new Date('2023-10-31')
-					},
-					{
-						participantType: 'Adult',
-						amount: 25,
-						validUntil: new Date('2023-11-25')
-					},
-					{
-						participantType: 'Adult',
-						amount: 30,
-						validUntil: new Date('2023-11-30')
-					}
-				]
-			}
-		]
 	},
 	contactInfo: {
 		whatsapp: '640-2444',
