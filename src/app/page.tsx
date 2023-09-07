@@ -174,7 +174,7 @@ export default function Home() {
 							>
 								<div className='class-thumb'>
 									<img
-										src={product.image}
+										src={`/nextjs-github-pages/${product.image}`}
 										className='img-fluid'
 										alt='Class'
 									/>
@@ -230,7 +230,7 @@ export default function Home() {
 						data-aos-delay='250'
 					>
 						<img
-							src={eventInfo.routeInfo.mapImage}
+							src={`/nextjs-github-pages/${eventInfo.routeInfo.mapImage}`}
 							className='img-fluid'
 							alt='map' to
 						/>
@@ -292,7 +292,7 @@ export default function Home() {
 						{eventInfo.sponsorInfo.sponsors.map(sponsor => (
 							<div className='col-lg-3 col-md-6 col-12' data-aos='fade-up' data-aos-delay='700'>
 								<div className='team-thumb'>
-									<img src='images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
+									<img src='/nextjs-github-pages/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
 
 									<div className='team-info d-flex flex-column'>
 
