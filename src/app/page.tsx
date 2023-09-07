@@ -7,6 +7,7 @@ const dateFormatOptions = {
 	day: '2-digit',
 	year: 'numeric'
 }
+//@ts-ignore
 const formatter = new Intl.DateTimeFormat('en-US', dateFormatOptions)
 
 export default function Home() {
