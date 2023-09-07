@@ -235,7 +235,7 @@ export default function Home() {
 						<img
 							src={`/nextjs-github-pages/${eventInfo.routeInfo.mapImage}`}
 							className='img-fluid'
-							alt='map' to
+							alt='map'
 						/>
 						{/*<iframe*/}
 						{/*	src='https://routes.rungoapp.com/embedded/a2LTuChETH?units=km&hasTurns=false&hasPOIs=true&hideMetrics=false&isStatic=true'*/}
