@@ -192,7 +192,7 @@ export default function Home() {
 													${tier.price}
 												</span>
 												{tier.gifts.map((gift, i) => (
-													<small className='mt-3'>
+													<small key={i} className='mt-3'>
 														{gift}
 													</small>
 												))}
