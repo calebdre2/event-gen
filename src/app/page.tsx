@@ -136,6 +136,7 @@ export default function Home() {
 							{eventInfo.about.description.split('\n').map((item, i) => (
 								<p
 									data-aos='fade-up' data-aos-delay={50 + (i * 25)}
+									key={i}
 								>
 									{item}
 								</p>
@@ -168,6 +169,7 @@ export default function Home() {
 					<div className='row'>
 						{eventInfo.registrationInfo.products.map((product, i) => (
 							<div
+								key={i}
 								className='col-lg-6 col-md-6 col-12'
 								data-aos='fade-up'
 								data-aos-delay='275'
@@ -184,7 +186,7 @@ export default function Home() {
 										</h3>
 
 										{product.tiers.map((tier, i) => (
-											<div>
+											<div key={i}>
 												<h6>{tier.name}</h6>
 												<span className='d-block'>
 													${tier.price}
@@ -289,8 +291,8 @@ export default function Home() {
 						{eventInfo.sponsorInfo.message}
 					</p>
 					<div className='row'>
-						{eventInfo.sponsorInfo.sponsors.map(sponsor => (
-							<div className='col-lg-3 col-md-6 col-12' data-aos='fade-up' data-aos-delay='700'>
+						{eventInfo.sponsorInfo.sponsors.map((sponsor, i) => (
+							<div key={i} className='col-lg-3 col-md-6 col-12' data-aos='fade-up' data-aos-delay='700'>
 								<div className='team-thumb'>
 									<img src='/nextjs-github-pages/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
 
