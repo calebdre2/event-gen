@@ -2,10 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import './css/bootstrap.min.css';
-import './css/aos.css';
-import './css/font-awesome.min.css';
-import './css/tooplate-gymso-style.css';
+import '@/app/css/bootstrap.min.css';
+import '@/app/css/aos.css';
 
 import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
