@@ -77,11 +77,11 @@ export default function Home() {
 							</li>
 							<li className='nav-item'>
 								<a
-									href='#'
+									href='https://calebdre1.typeform.com/to/KhPTBJmG'
 									className='nav-link smoothScroll'
 
-									data-toggle='modal'
-									data-target='#membershipForm'
+									// data-toggle='modal'
+									// data-target='#membershipForm'
 								>
 									Volunteer
 								</a>
@@ -395,7 +395,7 @@ export default function Home() {
 						</div>
 
 						<div className='modal-body'>
-							<div data-tf-widget="KhPTBJmG" data-tf-opacity="100" data-tf-iframe-props="title=Volunteer Signup Form" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+
 							{/*<form*/}
 							{/*	className='membership-form webform'*/}
 							{/*	role='form'*/}
