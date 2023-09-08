@@ -214,7 +214,7 @@ export default function Home() {
 												</span>
 												{tier.gifts.map((gift, i) => (
 													<small key={i} className='mt-3'>
-														{gift}
+														{gift} {i < tier.gifts.length - 1 ? ' | ' : ''}
 													</small>
 												))}
 											</div>
