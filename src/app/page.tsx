@@ -177,7 +177,7 @@ export default function Home() {
 								data-aos-delay='275'
 							>
 								<div className='class-thumb'>
-									<Image
+									<img
 										src={`/event-gen/${product.image}`}
 										className='img-fluid'
 										alt='Class'
@@ -233,7 +233,7 @@ export default function Home() {
 						data-aos='fade-up'
 						data-aos-delay='250'
 					>
-						<Image
+						<img
 							src={`/event-gen/${eventInfo.routeInfo.mapImage}`}
 							className='img-fluid'
 							alt='map'
@@ -296,8 +296,8 @@ export default function Home() {
 						{eventInfo.sponsorInfo.sponsors.map((sponsor, i) => (
 							<div key={i} className='col-lg-3 col-md-6 col-12' data-aos='fade-up' data-aos-delay='700'>
 								<div className='team-thumb'>
-									<Image src='/event-gen/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
-									<Image src='/event-gen/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
+									<img src='/event-gen/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
+									<img src='/event-gen/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
 
 									<div className='team-info d-flex flex-column'>
 

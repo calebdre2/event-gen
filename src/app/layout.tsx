@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 
 import '@/app/css/bootstrap.min.css';
 import '@/app/css/aos.css';
+import '@/app/css/tooplate-gymso-style.css';
 
 import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
@@ -30,7 +31,6 @@ export default function RootLayout({
 					content="width=device-width, initial-scale=1, maximum-scale=1"
 				/>
 				{/* <!-- MAIN CSS --> */}
-				<link rel="stylesheet" href="/css/tooplate-gymso-style.css" />
 
 				<Script src="/event-gen/js/jquery.min.js"></Script>
 				<Script src="/event-gen/js/bootstrap.min.js"></Script>
