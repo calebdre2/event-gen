@@ -77,8 +77,11 @@ export default function Home() {
 							</li>
 							<li className='nav-item'>
 								<a
-									href='#volunteer'
+									href='#'
 									className='nav-link smoothScroll'
+
+									data-toggle='modal'
+									data-target='#membershipForm'
 								>
 									Volunteer
 								</a>
