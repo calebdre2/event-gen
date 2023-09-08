@@ -31,11 +31,12 @@ export default function RootLayout({
 				/>
 				{/* <!-- MAIN CSS --> */}
 				<link rel="stylesheet" href="/css/tooplate-gymso-style.css" />
-				<Script src="/js/jquery.min.js"></Script>
-				<Script src="/js/bootstrap.min.js"></Script>
-				<Script src="/js/aos.js"></Script>
-				<Script src="/js/smoothscroll.js"></Script>
-				<Script src="/js/custom.js"></Script>
+
+				<Script src="/event-gen/js/jquery.min.js"></Script>
+				<Script src="/event-gen/js/bootstrap.min.js"></Script>
+				<Script src="/event-gen/js/aos.js"></Script>
+				<Script src="/event-gen/js/smoothscroll.js"></Script>
+				<Script src="/event-gen/js/custom.js"></Script>
 
 			</head>
 			<body className={inter.className}>{children}</body>
