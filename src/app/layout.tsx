@@ -1,8 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 
+import './css/bootstrap.min.css';
+import './css/aos.css';
+import './css/font-awesome.min.css';
+import './css/tooplate-gymso-style.css';
+
+import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -26,11 +31,6 @@ export default function RootLayout({
 					name="viewport"
 					content="width=device-width, initial-scale=1, maximum-scale=1"
 				/>
-
-				<link rel="stylesheet" href="/css/bootstrap.min.css" />
-				<link rel="stylesheet" href="/css/font-awesome.min.css" />
-				<link rel="stylesheet" href="/css/aos.css" />
-
 				{/* <!-- MAIN CSS --> */}
 				<link rel="stylesheet" href="/css/tooplate-gymso-style.css" />
 				<Script src="/js/jquery.min.js"></Script>
