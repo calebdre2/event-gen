@@ -36,7 +36,7 @@ export default function Home() {
 						<ul className='navbar-nav ml-lg-auto'>
 							<li className='nav-item'>
 								<a
-									href='#home'
+									href='#about'
 									className='nav-link smoothScroll'
 								>
 									Event Info
@@ -45,15 +45,7 @@ export default function Home() {
 
 							<li className='nav-item'>
 								<a
-									href='#about'
-									className='nav-link smoothScroll'
-								>
-									Location
-								</a>
-							</li>
-							<li className='nav-item'>
-								<a
-									href='#contact'
+									href='#register'
 									className='nav-link smoothScroll'
 								>
 									Register
@@ -61,7 +53,31 @@ export default function Home() {
 							</li>
 							<li className='nav-item'>
 								<a
-									href='#about'
+									href='#location'
+									className='nav-link smoothScroll'
+								>
+									Location
+								</a>
+							</li>
+							<li className='nav-item'>
+								<a
+									href='#pickup'
+									className='nav-link smoothScroll'
+								>
+									Pickup
+								</a>
+							</li>
+							<li className='nav-item'>
+								<a
+									href='#sponsors'
+									className='nav-link smoothScroll'
+								>
+									Sponsors
+								</a>
+							</li>
+							<li className='nav-item'>
+								<a
+									href='#volunteer'
 									className='nav-link smoothScroll'
 								>
 									Volunteer
@@ -100,7 +116,7 @@ export default function Home() {
 									{formatter.format(eventInfo.date)}
 								</h6>
 								<a
-									href='#feature'
+									href='#about'
 									className='btn custom-btn mt-3'
 									data-aos='fade-up'
 									data-aos-delay='600'
@@ -109,7 +125,7 @@ export default function Home() {
 								</a>
 
 								<a
-									href='#about'
+									href='#register'
 									className='btn custom-btn bordered mt-3'
 									data-aos='fade-up'
 									data-aos-delay='700'
@@ -122,7 +138,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className='feature' id='feature'>
+			<section className='feature' id='about'>
 				<div className='container'>
 					<div className='row'>
 						<div
@@ -160,7 +176,7 @@ export default function Home() {
 			</section>
 
 			{/* <!-- CLASS --> */}
-			<section className='class section' id='class'>
+			<section className='class section' id='register'>
 				<div className='container'>
 					<div className='col-lg-12 col-12 text-center mb-5'>
 						{/* <!-- <h6 data-aos="fade-up">Join the race</h6> --> */}
@@ -218,7 +234,7 @@ export default function Home() {
 			</section>
 
 			{/* <!-- ABOUT --> */}
-			<section className='about section' id='about'>
+			<section className='about section' id='location'>
 				<div className='container'>
 					{/* <!-- center iframe --> */}
 					<a
@@ -249,7 +265,7 @@ export default function Home() {
 			</section>
 
 
-			<section className='feature' id='packetPickup'>
+			<section className='feature' id='pickup'>
 				<div className='container'>
 					<div className='row'>
 						<div className='mr-lg-auto mt-3 col-lg-6 col-md-6 col-12'>
