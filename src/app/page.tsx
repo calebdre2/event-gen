@@ -1,4 +1,5 @@
 import { eventInfo } from '@/lib/data'
+import Image from 'next/image'
 
 const dateFormatOptions = {
 	timeZone: 'America/New_York',
@@ -176,8 +177,8 @@ export default function Home() {
 								data-aos-delay='275'
 							>
 								<div className='class-thumb'>
-									<img
-										src={`/nextjs-github-pages/${product.image}`}
+									<Image
+										src={`/event-gen/${product.image}`}
 										className='img-fluid'
 										alt='Class'
 									/>
@@ -232,8 +233,8 @@ export default function Home() {
 						data-aos='fade-up'
 						data-aos-delay='250'
 					>
-						<img
-							src={`/nextjs-github-pages/${eventInfo.routeInfo.mapImage}`}
+						<Image
+							src={`/event-gen/${eventInfo.routeInfo.mapImage}`}
 							className='img-fluid'
 							alt='map'
 						/>
@@ -295,7 +296,8 @@ export default function Home() {
 						{eventInfo.sponsorInfo.sponsors.map((sponsor, i) => (
 							<div key={i} className='col-lg-3 col-md-6 col-12' data-aos='fade-up' data-aos-delay='700'>
 								<div className='team-thumb'>
-									<img src='/nextjs-github-pages/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
+									<Image src='/event-gen/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
+									<Image src='/event-gen/images/team/team-image.jpg' className='img-fluid' alt='Trainer' />
 
 									<div className='team-info d-flex flex-column'>
 
